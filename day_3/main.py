@@ -9,23 +9,23 @@ joltage = 0
 #     '818181911112111'
     
 # ]
-# Part 1
-# for bank in banks:
-#     m1, m2 = '0', '0'
-#     p1, p2 = 0, 0
-#     for i, n in enumerate(bank):
-#         if n > m1:
-#             if i != len(bank) - 1:
-#                 m1 = n
-#                 p1 = i
-#     for j in range(p1 + 1, len(bank)):
-#         if bank[j] > m2:
-#             m2 = bank[j]
-#             p2 = j
-#     num_str = m1 + m2
-#     joltage += int(num_str)
+#### Part 1
+for bank in banks:
+    m1, m2 = '0', '0'
+    p1, p2 = 0, 0
+    for i, n in enumerate(bank):
+        if n > m1:
+            if i != len(bank) - 1:
+                m1 = n
+                p1 = i
+    for j in range(p1 + 1, len(bank)):
+        if bank[j] > m2:
+            m2 = bank[j]
+            p2 = j
+    num_str = m1 + m2
+    joltage += int(num_str)
 
-# print(joltage)
+print(joltage)
 
 # Part 2
 total_joltage = 0
