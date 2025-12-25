@@ -35,8 +35,7 @@ for bank in banks:
     deletes = len(bank) - 12
     for num in bank:
         while stack and deletes > 0 and stack[-1] < num:
-            stack.pop() # Eliminamos el pequeño
-            deletes -= 1
+            stack.pop()            deletes -= 1
         
         stack.append(num)
     
@@ -47,4 +46,4 @@ for bank in banks:
 
     total_joltage += int(num_str)
 
-print(f"\nJoltage Total: {total_joltage}")
+print(total_joltage)
