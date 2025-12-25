@@ -35,7 +35,8 @@ for bank in banks:
     deletes = len(bank) - 12
     for num in bank:
         while stack and deletes > 0 and stack[-1] < num:
-            stack.pop()            deletes -= 1
+            stack.pop()
+            deletes -= 1
         
         stack.append(num)
     
